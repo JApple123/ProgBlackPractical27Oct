@@ -1,10 +1,32 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-bs-theme="light">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Computing in Conservation</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-B/GM4XqrwHnWXNOWMbloTmrYXZg10cakYGmpfsR/bbzQ6JAJI4ihuyADKLnBgrCe" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+      .conservation-carousel {
+        width: 9rem;
+        max-width: 9rem;
+      }
+
+      .conservation-copy {
+        flex: 1 1 0%;
+        min-width: 0;
+      }
+
+      .conservation-carousel .carousel-inner {
+        aspect-ratio: 3 / 2;
+      }
+
+      .conservation-photo {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    </style>
   </head>
   <body>
     <nav class="navbar lg:navbar-expand bg-1" data-bs-theme="dark">
@@ -15,25 +37,100 @@
         <dialog class="drawer drawer-end" tabindex="-1" id="navbarSupportedContent" aria-labelledby="navbarSupportedContentLabel">
           <div class="drawer-body">
             <ul class="navbar-nav me-auto mb-2 lg:mb-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="/">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/healthAndMedicine.html">Health and Medicine</a>
-                <a class="nav-link" href="/conservation.html">Communication</a>
-                <a class="nav-link" href="/conservation.html">Conservation</a>
-              </li>
+              <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="healthAndMedicine.html">Health and Medicine</a></li>
+              <li class="nav-item"><a class="nav-link" href="communication.html">Communication</a></li>
+              <li class="nav-item"><a class="nav-link active" aria-current="page" href="conservation.html">Conservation</a></li>
             </ul>
-            <form class="d-flex" role="search">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn-outline theme-success" type="submit">Search</button>
-            </form>
           </div>
         </dialog>
       </div>
     </nav>
 
-    <h1>Hello, world!</h1>
+    <main class="container my-5">
+      <header class="mb-5">
+        <p class="text-success fw-semibold text-uppercase mb-2">Positive impacts of computer science</p>
+        <h1 class="display-4">Computing in Conservation</h1>
+        <p class="lead col-lg-9">Computers help conservationists understand what is happening to wildlife and habitats, spot threats sooner, and coordinate action across large areas.</p>
+      </header>
+
+      <section class="mb-5" aria-labelledby="monitoring-heading">
+        <h2 id="monitoring-heading" class="mb-3">Monitoring wildlife and habitats</h2>
+        <div class="row g-4 align-items-center mb-3 flex-nowrap">
+          <div class="col conservation-copy">
+            <p class="mb-0">Conservation teams collect information from camera traps, GPS tags, acoustic sensors, satellites and field surveys. Software can organise and analyse these large datasets far faster than people working through every record by hand.</p>
+          </div>
+          <div class="col-auto">
+            <div id="conservationPhotos" class="carousel slide conservation-carousel" data-bs-ride="carousel" aria-label="Conservation computing photos">
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#conservationPhotos" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Show forest survey photo"></button>
+                <button type="button" data-bs-target="#conservationPhotos" data-bs-slide-to="1" aria-label="Show conservation monitoring room photo"></button>
+              </div>
+              <div class="carousel-inner rounded-3 shadow-sm">
+                <div class="carousel-item active">
+                  <img class="conservation-photo d-block" src="images/conservation_1.jpg" alt="A conservation worker uses a tablet to view a map while surveying a forest">
+                </div>
+                <div class="carousel-item">
+                  <img class="conservation-photo d-block" src="images/conservation_2.jpg" alt="Rangers use satellite maps and computer data in a conservation monitoring room">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row g-4 mt-1">
+          <div class="col-md-6 col-lg-4">
+            <article class="card h-100">
+              <div class="card-body">
+                <h3 class="h5 card-title">Finding and tracking animals</h3>
+                <p class="card-text">GPS collars and tags record where animals travel. Mapping tools reveal migration routes, breeding areas and places where wildlife may be at risk from roads, development or poaching.</p>
+              </div>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <article class="card h-100">
+              <div class="card-body">
+                <h3 class="h5 card-title">Identifying species</h3>
+                <p class="card-text">Image recognition can help sort thousands of camera-trap photographs, while sound analysis can identify birds, bats and other animals from recordings. This makes surveys more efficient.</p>
+              </div>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <article class="card h-100">
+              <div class="card-body">
+                <h3 class="h5 card-title">Watching ecosystems change</h3>
+                <p class="card-text">Satellite images and geographic information systems (GIS) help compare forests, wetlands and coastlines over time, showing habitat loss, wildfires, erosion and restoration progress.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="row g-4 align-items-stretch mb-5" aria-labelledby="action-heading">
+        <div class="col-lg-7">
+          <h2 id="action-heading" class="mb-3">Turning information into action</h2>
+          <p>Once information is collected, computer models can help researchers estimate how populations might change and compare possible conservation plans. This supports decisions such as where to restore habitat or which areas need protection first.</p>
+          <p>Connected sensors can also send alerts about events such as a sudden change in water quality or a fire. Rangers and conservation organisations can use these warnings to respond sooner and direct limited resources where they are most needed.</p>
+        </div>
+        <div class="col-lg-5">
+          <aside class="p-4 rounded bg-light border h-100" aria-labelledby="benefits-heading">
+            <h2 id="benefits-heading" class="h4">Key benefits</h2>
+            <ul class="mb-0">
+              <li>Collects evidence from remote or hard-to-reach places.</li>
+              <li>Finds patterns across large amounts of data.</li>
+              <li>Helps detect threats and changes earlier.</li>
+              <li>Supports better-informed protection and restoration plans.</li>
+              <li>Makes it easier to share findings between teams.</li>
+            </ul>
+          </aside>
+        </div>
+      </section>
+
+      <section class="border-top pt-4" aria-labelledby="care-heading">
+        <h2 id="care-heading" class="h4">Using technology responsibly</h2>
+        <p class="mb-0">Computing is most useful when its results are checked against field knowledge. Equipment can be expensive, data can be incomplete, and publishing the location of a rare species could put it at risk. Conservation teams need to protect sensitive information and use technology alongside the experience of local communities and researchers.</p>
+      </section>
+    </main>
+
     <script type="module" src="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-1a/pXj49ZQ1aHEmrJ+gMw1otqoVsYwlEnlD8mIfY2TV03r20Y0CN7uqx1tQogjPL" crossorigin="anonymous"></script>
   </body>
 </html>
