@@ -1,0 +1,5 @@
+.health-carousel .carousel-item img {
+  width: 100%;
+  aspect-ratio: 3456 / 1978;
+  object-fit: cover;
+}

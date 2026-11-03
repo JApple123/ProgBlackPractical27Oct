@@ -1,0 +1,10 @@
+.introduction,
+.main-page-content {
+  width: min(100% - 2rem, 72rem);
+  margin-inline: auto;
+}
+
+.introduction { margin-block: 2rem; }
+.advantages,
+.convenience,
+.speed { margin-block: 2rem; }
