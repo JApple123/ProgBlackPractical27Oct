@@ -27,7 +27,8 @@ h3 { font-size: 1.25rem; }
 .navbar .nav-link:hover,
 .navbar .nav-link.active { color: #fff; }
 
-main,
-.page-content { padding-block: 2rem; }
+main { padding-block: 2rem; }
+
+.section { margin-block: 2rem; }
 
 img { max-width: 100%; }
