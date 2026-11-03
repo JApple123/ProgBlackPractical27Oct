@@ -8,44 +8,44 @@
     <link rel="stylesheet" href="Styles/site.css">
   </head>
   <body>
-    <nav class="navbar lg:navbar-expand bg-1" data-bs-theme="dark">
-      <div class="container">
-        <button class="btn-icon navbar-toggler" type="button" data-bs-toggle="drawer" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon" aria-hidden="true"></span>
+    <nav class="site-header" data-bs-theme="dark">
+      <div class="page-container">
+        <button class="menu-button" type="button" data-bs-toggle="drawer" data-bs-target="#site-navigation" aria-controls="site-navigation" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="menu-icon" aria-hidden="true">☰</span>
         </button>
-        <dialog class="drawer drawer-end" tabindex="-1" id="nav" aria-label="Site navigation">
+        <dialog class="drawer drawer-end" tabindex="-1" id="site-navigation" aria-label="Site navigation">
           <div class="drawer-body">
-            <ul class="navbar-nav me-auto mb-2 lg:mb-0">
-              <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-              <li class="nav-item"><a class="nav-link" href="healthAndMedicine.html">Health and Medicine</a></li>
-              <li class="nav-item"><a class="nav-link active" href="communication.html" aria-current="page">Communication</a></li>
-              <li class="nav-item"><a class="nav-link" href="conservation.html">Conservation</a></li>
+            <ul class="navigation-list">
+              <li><a class="navigation-link" href="index.html">Home</a></li>
+              <li><a class="navigation-link" href="healthAndMedicine.html">Health and Medicine</a></li>
+              <li><a class="navigation-link current-page" href="communication.html" aria-current="page">Communication</a></li>
+              <li><a class="navigation-link" href="conservation.html">Conservation</a></li>
             </ul>
           </div>
         </dialog>
       </div>
     </nav>
 
-    <main class="container my-5">
-      <header class="intro mb-5">
-        <p class="text-success fw-semibold text-uppercase mb-2">Positive impacts of computer science</p>
+    <main class="page-container page-main">
+      <header class="page-intro">
+        <p class="page-label">Positive impacts of computer science</p>
         <h1>Communication</h1>
-        <p class="lead">Computing has greatly increased the speed and reach of communication around the world. Before the internet, people relied on physical mail for many long-distance messages and telegraphs for rapid communication across great distances.</p>
+        <p class="intro-text">Computing has greatly increased the speed and reach of communication around the world. Before the internet, people relied on physical mail for many long-distance messages and telegraphs for rapid communication across great distances.</p>
       </header>
 
-      <section class="section" aria-labelledby="overview">
+      <section class="page-section" aria-labelledby="overview">
         <h2 id="overview">Advantages of modern communication</h2>
         <p>The internet made it possible to send information quickly across long distances. Early internet communication included email; today it also includes social media, messaging, voice and video calls, and blogs.</p>
         <p>These tools are easier to use and much faster than many earlier ways of communicating.</p>
       </section>
 
-      <section class="section" aria-labelledby="convenience">
+      <section class="page-section" aria-labelledby="convenience">
         <h2 id="convenience">Convenience</h2>
         <p>Sending a letter traditionally meant writing it, putting it in an envelope, adding a stamp and waiting for it to be delivered. Postal services made this process reliable, but it still took time and several steps.</p>
         <p>With modern communication, people can find a contact, write a message and send it in moments. Texting, phone calls and social media make it simpler to keep in touch.</p>
       </section>
 
-      <section class="section" aria-labelledby="speed">
+      <section class="page-section" aria-labelledby="speed">
         <h2 id="speed">Speed</h2>
         <p>Digital messages can reach someone on the other side of the world in seconds. This helps people share urgent information, coordinate work and stay connected across time zones.</p>
       </section>

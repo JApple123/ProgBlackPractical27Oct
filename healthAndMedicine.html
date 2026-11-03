@@ -5,124 +5,86 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Health and Medicine</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-B/GM4XqrwHnWXNOWMbloTmrYXZg10cakYGmpfsR/bbzQ6JAJI4ihuyADKLnBgrCe" crossorigin="anonymous">
-    <link rel="stylesheet" href="Styles/healthAndMedicine.css">
     <link rel="stylesheet" href="Styles/site.css">
+    <link rel="stylesheet" href="Styles/healthAndMedicine.css">
   </head>
   <body>
-    <nav class="navbar lg:navbar-expand bg-1" data-bs-theme="dark">
-      <div class="container">
-        <button class="btn-icon navbar-toggler" type="button" data-bs-toggle="drawer" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon" aria-hidden="true"></span>
+    <nav class="site-header" data-bs-theme="dark">
+      <div class="page-container">
+        <button class="menu-button" type="button" data-bs-toggle="drawer" data-bs-target="#site-navigation" aria-controls="site-navigation" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="menu-icon" aria-hidden="true">☰</span>
         </button>
-        <dialog class="drawer drawer-end" tabindex="-1" id="nav" aria-label="Site navigation">
+        <dialog class="drawer drawer-end" tabindex="-1" id="site-navigation" aria-label="Site navigation">
           <div class="drawer-body">
-            <ul class="navbar-nav me-auto mb-2 lg:mb-0">
-              <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-              <li class="nav-item"><a class="nav-link active" href="healthAndMedicine.html" aria-current="page">Health and Medicine</a></li>
-              <li class="nav-item"><a class="nav-link" href="communication.html">Communication</a></li>
-              <li class="nav-item"><a class="nav-link" href="conservation.html">Conservation</a></li>
+            <ul class="navigation-list">
+              <li><a class="navigation-link" href="index.html">Home</a></li>
+              <li><a class="navigation-link current-page" href="healthAndMedicine.html" aria-current="page">Health and Medicine</a></li>
+              <li><a class="navigation-link" href="communication.html">Communication</a></li>
+              <li><a class="navigation-link" href="conservation.html">Conservation</a></li>
             </ul>
           </div>
         </dialog>
       </div>
     </nav>
 
-    <main class="container my-5">
-      <header class="intro mb-5">
-        <p class="text-success fw-semibold text-uppercase mb-2">Positive impacts of computer science</p>
+    <main class="page-container page-main">
+      <header class="page-intro">
+        <p class="page-label">Positive impacts of computer science</p>
         <h1>Health and medicine</h1>
-        <p class="lead col-lg-9">Computer science has allowed for multiple advances in the medical field, such as the <strong>Da Vinci Robot</strong> for surgery,
-        the use of <strong>machine learning</strong> in identifying different health issues, and expanding the opportunity for remote health
-        care through linked health monitors like insulin pumps and fitness trackers.
-        <br><br>
-        <h2>Da Vinci Robot</h2>
-        <br>
-        Firstly the Da Vinci robot:
-        <br>
-        This is a precision surgery tool that allows surgeons to use small controllers that move the arms of the machine at a 
-        smaller scale, and with filtering for hand tremors. The robot also has a high-definition view of the surgical site to 
-        allow the surgeon to operate effectively.</p>
+        <p class="intro-text">Computer science has allowed for multiple advances in the medical field, such as the <strong>Da Vinci Robot</strong> for surgery, the use of <strong>machine learning</strong> in identifying different health issues, and expanding the opportunity for remote health care through linked health monitors like insulin pumps and fitness trackers.</p>
       </header>
 
-      <section class="section" aria-labelledby="surgery">
+      <section class="page-section" aria-labelledby="surgery">
         <h2 id="surgery">Computer-assisted surgery</h2>
-        <p>The da Vinci surgical system lets surgeons control small instruments through hand controllers. The system can scale movements and filter hand tremors, while a high-definition view helps the surgeon see the operating area in detail.</p>
+        <p>The Da Vinci robot is a precision surgery tool that allows surgeons to use small controllers that move the arms of the machine at a smaller scale and filter hand tremors. The robot also has a high-definition view of the surgical site to help the surgeon operate effectively.</p>
 
-        <div id="gallery" class="carousel carousel-dark slide gallery mt-4" data-bs-ride="carousel" aria-label="Da Vinci surgical system images">
+        <div id="image-gallery" class="carousel carousel-dark slide image-gallery" data-bs-ride="carousel" aria-label="Da Vinci surgical system images">
           <div class="carousel-indicators">
-            <button type="button" data-bs-target="#gallery" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Show surgical system"></button>
-            <button type="button" data-bs-target="#gallery" data-bs-slide-to="1" aria-label="Show surgeon console controllers"></button>
+            <button type="button" data-bs-target="#image-gallery" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Show surgical system"></button>
+            <button type="button" data-bs-target="#image-gallery" data-bs-slide-to="1" aria-label="Show surgeon console controllers"></button>
           </div>
           <div class="carousel-inner">
             <div class="carousel-item active" data-bs-interval="5000">
-              <img src="images/da_vinci.png" class="gallery-image d-block w-100" alt="Da Vinci surgical system">
-              <div class="carousel-caption d-none d-md-block">
-                <h3 class="h5">Da Vinci surgical system</h3>
-              </div>
+              <img src="images/da_vinci.png" class="gallery-image" alt="Da Vinci surgical system">
+              
             </div>
             <div class="carousel-item" data-bs-interval="5000">
-              <img src="images/da-vinci-controllers.jpeg" class="gallery-image d-block w-100" alt="Da Vinci surgeon console controllers">
-              <div class="carousel-caption d-none d-md-block">
-                <h3 class="h5">Surgeon console controllers</h3>
-              </div>
+              <img src="images/da-vinci-controllers.jpeg" class="gallery-image" alt="Da Vinci surgeon console controllers">
+              
             </div>
           </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#gallery" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <button class="carousel-previous" type="button" data-bs-target="#image-gallery" data-bs-slide="prev" aria-label="Previous image">
             <span class="visually-hidden">Previous</span>
           </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#gallery" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <button class="carousel-next" type="button" data-bs-target="#image-gallery" data-bs-slide="next" aria-label="Next image">
             <span class="visually-hidden">Next</span>
           </button>
         </div>
       </section>
 
-      <section class="section" aria-labelledby="other-uses">
-        <h2 id="other-uses">Other uses in healthcare</h2>
-        <p>Machine learning can help clinicians examine medical images and identify patterns that may need attention. Connected health devices can also record measurements and share them with care teams, supporting remote monitoring between appointments.</p>
+      <section class="page-section" aria-labelledby="learning">
+        <h2 id="learning">Machine learning</h2>
+        <p>Machine learning can help detect some illnesses before they become a major problem. For example, Skin Analytics uses dermatoscopic images taken with smartphone attachments to triage and rule out skin cancer. Its DERM device is deployed across numerous NHS trusts in the UK. Other products include DermaSensor, an FDA-cleared device that uses elastic scattering spectroscopy and machine learning to help evaluate suspicious skin lesions for melanoma and other cancers.</p>
+      </section>
+
+      <section class="page-section" aria-labelledby="other-uses">
+        <h2 id="other-uses">Other uses</h2>
+        <div class="content-list">
+          <div class="content-card">
+            <h3>Electronic health records</h3>
+            <p>Store and organise patient medical histories, test results and treatment plans in a digital format for easier access across providers.</p>
+          </div>
+          <div class="content-card">
+            <h3>Medical imaging</h3>
+            <p>Power diagnostic equipment such as CT scans, MRIs and ultrasounds to create detailed views of internal anatomy.</p>
+          </div>
+          <div class="content-card">
+            <h3>Patient monitoring</h3>
+            <p>Track vital signs in intensive care units and trigger automated alerts for medical staff if complications arise.</p>
+          </div>
+        </div>
       </section>
     </main>
-
-    <div class="container my-5">
-      <div class = "col-lg-8 px-0">
-        <h2>Machine Learning</h2>
-        <br>
-        Machine Learning also has a use in Medicine, as it allows for the detection of some illness before it becomes a
-        major problem. For example, the company Skin Analytics uses dermatoscopic images taken with smartphone attachments
-        to triage and rule out ksin cancer. This device is called DERM, and is deployed across numerous NHS trusts in the UK.
-        Other similar products include DermaSensor, an FDA-cleared medical device that uses Elastic Scattering Spectroscopy
-        and machine learning to help evaluate suspicious skin lesions for melanoma and other cancers.
-      </div>
-
-      <div class="row g-4 mt-1">
-            <div class="col-md-6 col-lg-4">
-              <h2>Other uses</h2>
-              <div class="card h-100">
-                <div class="card-body">
-                  <h3 class="h5 card-title">Electronic Health Records</h3>
-                  <p class="card-text">Store and organize patient medical histories, test results, and treatment plans in a digital format for easy access across providers.</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 col-lg-4">
-              <div class="card h-100">
-                <div class="card-body">
-                  <h3 class="h5 card-title">Medical Imaging</h3>
-                  <p class="card-text">Power high-resolution diagnostic equipment such as CT scans, MRIs, and ultrasounds to build detailed views of internal anatomy.</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 col-lg-4">
-              <div class="card h-100">
-                <div class="card-body">
-                  <h3 class="h5 card-title">Patient Monitoring</h3>
-                  <p class="card-text">Track vital signs in intensive care units (ICUs) and trigger automated alerts for medical staff if complications arise.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-    </div>
 
     <script type="module" src="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-1a/pXj49ZQ1aHEmrJ+gMw1otqoVsYwlEnlD8mIfY2TV03r20Y0CN7uqx1tQogjPL" crossorigin="anonymous"></script>
   </body>

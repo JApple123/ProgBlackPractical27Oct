@@ -1,9 +1,9 @@
-.gallery {
+.image-gallery {
   width: 9rem;
   max-width: 9rem;
 }
 
-.gallery .carousel-inner { aspect-ratio: 3 / 2; }
+.image-gallery .carousel-inner { aspect-ratio: 3 / 2; }
 
 .gallery-image {
   width: 100%;
