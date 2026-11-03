@@ -5,8 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Health and Medicine</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-B/GM4XqrwHnWXNOWMbloTmrYXZg10cakYGmpfsR/bbzQ6JAJI4ihuyADKLnBgrCe" crossorigin="anonymous">
-    <link rel="stylesheet" href="Styles/site.css">
-    <link rel="stylesheet" href="Styles/healthAndMedicine.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+
+      .content-width {
+        max-width: 60rem;      /* change this to whatever width you want */
+        margin-inline: auto;   /* centres it */
+      }
+
+      #carouselExampleDark,
+      #carouselExampleDark .carousel-inner {
+        width: 100%;
+        max-width: none;
+      }
+
+      #carouselExampleDark .carousel-inner img {
+        aspect-ratio: 345.6 / 197.8;
+        object-fit: cover;
+      }
+    /* Both images share the same aspect ratio as your second image (3456x1978),
+      so they render at identical heights at every screen width. */
+
+    #carouselExampleDark .carousel-inner img {
+      aspect-ratio: 345.6 / 197.8;
+      object-fit: cover; /* crops the first image to fit instead of stretching it */
+    }
+    </style>
   </head>
   <body>
     <nav class="navbar lg:navbar-expand bg-1" data-bs-theme="dark">
@@ -17,10 +41,13 @@
         <dialog class="drawer drawer-end" tabindex="-1" id="navbarSupportedContent" aria-labelledby="navbarSupportedContentLabel">
           <div class="drawer-body">
             <ul class="navbar-nav me-auto mb-2 lg:mb-0">
-              <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-              <li class="nav-item"><a class="nav-link active" href="healthAndMedicine.html">Health and Medicine</a></li>
-              <li class="nav-item"><a class="nav-link" href="communication.html">Communication</a></li>
-              <li class="nav-item"><a class="nav-link" href="conservation.html">Conservation</a></li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/healthAndMedicine.html">Health and Medicine</a>
+                <a class="nav-link" href="/communication.html">Communication</a>
+                <a class="nav-link" href="/conservation.html">Conservation</a>
               </li>
             </ul>
 
@@ -32,42 +59,41 @@
     <div class="container my-5">
       <h1>Healthcare and Medicine</h1>
       <div class="col-lg-8 px-0">
-        Computer science has allowed for multiple advances in the medical field, such as the Da Vinci robot for surgery,
-        the use of machine learning in identifying different health issues, and expanding the opportunity for public Health
-        tracking through linked health monitors like insulin pumps and fitness trackers.
+        Computer science has allowed for multiple advances in the medical field, such as the <strong>Da Vinci Robot</strong> for surgery,
+        the use of <strong>machine learning</strong> in identifying different health issues, and expanding the opportunity for remote health
+        care through linked health monitors like insulin pumps and fitness trackers.
+        <br><br>
+        Firstly the Da Vinci robot:
+        <br>
+        This is a precision surgery tool that allows surgeons to use small controllers that move the arms of the machine at a 
+        smaller scale, and with filtering for hand tremors. The robot also has a high-definition view of the surgical site to 
+        allow the surgeon to operate effectively.
       </div>
-    </div>
-
-  <div id="carouselExampleDark" class="carousel carousel-dark slide health-carousel" data-bs-ride="carousel">
-    <div class="carousel-indicators">
-      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
-    </div>
-    <div class="carousel-inner">
-      <div class="carousel-item active" data-bs-interval="5000">
-        <img src="images/da_vinci.png" class="d-block w-100" alt="Da Vinci surgical system">
-        <div class="carousel-caption d-none d-md-block">
-          <h5>Da Vinci Surgical System</h5>
-          <p>Placeholder text describing the system and its key features.</p>
+      
+      <div class="content-width mt-4">
+        <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="5000">
+              <img src="images/da_vinci.png" class="d-block w-100" alt="Da Vinci surgical system">
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Da Vinci Surgical System</h5>
+                <p>Placeholder text describing the system and its key features.</p>
+              </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="5000">
+              <img src="images/da-vinci-controllers.jpeg" class="d-block w-100" alt="Da Vinci surgeon console controllers">
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Surgeon Console Controllers</h5>
+                <p>Placeholder text describing how the controllers work.</p>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="carousel-item" data-bs-interval="5000">
-        <img src="images/da-vinci-controllers.jpeg" class="d-block w-100" alt="Da Vinci surgeon console controllers">
-        <div class="carousel-caption d-none d-md-block">
-          <h5>Surgeon Console Controllers</h5>
-          <p>Placeholder text describing how the controllers work.</p>
-        </div>
-      </div>
     </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
-  </div>
 
     <script type="module" src="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-1a/pXj49ZQ1aHEmrJ+gMw1otqoVsYwlEnlD8mIfY2TV03r20Y0CN7uqx1tQogjPL" crossorigin="anonymous"></script>
     <script src="main.js"></script>
